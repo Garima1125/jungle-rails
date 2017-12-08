@@ -16,7 +16,7 @@ class SessionsController < ApplicationController
 
   def destroy
    session[:user_id] = nil
-   redirect_to root_url, notice: 'Thank you for shopping with us!!'
+   redirect_to root_url, notice: "You've successfully Logged out!!"
   end
 
   def session_params
