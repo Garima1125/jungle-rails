@@ -16,6 +16,8 @@ class SessionsController < ApplicationController
 
   def destroy
    session[:user_id] = nil
+   cookies.delete :auth_token
+    byebug
    redirect_to root_url, notice: "You've successfully Logged out!!"
   end
 
